@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     color: #fff;
+    font-family: "Moderustic", sans-serif;
+  font-style: normal;
 }
 
 html,
@@ -16,7 +18,9 @@ body {
     height: 100vh;
     width: 100%;
     background-color: #121212;
-    padding: 6vw 8vw;
+    padding: 8vw 4vw;
+font-weight: 300;
+    
 }
 
 #loader .elem {
@@ -24,41 +28,54 @@ body {
     justify-content: flex-start;
     text-align: center;
     /* background-color: red; */
+    gap: 2vw;
     overflow: hidden;
 }
 
-#loader .elem h1 {
+#loader .elem h1 ,h2 {
     text-transform: uppercase;
     font-size: 5vw;
+    font-weight: 500;
 }
 
+.elem h2{
+    /* animation: anime; */
+    /* animation-name: anime; */
+    opacity: 0;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-delay: 2ms;
+    animation-iteration-count: infinite;
+}
 #loader-part1 {
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: flex-start;
+    gap: 2vw;
+    font-weight: 400;
 }
 
 #loader-part1 h5 {
     /* background-color: blue; */
-    width: 2vw;
-    align-items: right;
+    width: 3.5vw;
 }
 
 #loader-part1 h6 {
-    margin-left: 2vw;
+    /* margin-left: 2vw; */
     /* background-color: green; */
 }
 
 #loader-part1 h5,
 h6 {
-    margin-right: 2vw;
-    text-align: left;
+    /* margin-right: 2vw;
+    text-align: left; */
 }
 
 #loader-part1 h5,
 h6 {
     font-size: 3.5vw;
-
+font-weight: 300;
 }
 
 #page1 {
@@ -66,4 +83,18 @@ h6 {
     width: 100%;
     background-color: blue;
 
+}
+
+@keyframes anime {
+    0%{
+        font-family: serif;
+        -webkit-text-stroke: 2px #fff;
+    }
+    100%{
+        font-family: 'Moderustic';
+        
+        -webkit-text-stroke: 2px #fff;
+        color: transparent;
+
+    }
 }
